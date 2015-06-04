@@ -1,0 +1,33 @@
+<ion-view view-title="Search">
+  <ion-content>
+    <center><p>Type in a student ID to see what books they have checked out</p></center>
+    
+    <form ng-submit="search(id)">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Student ID:</span>
+          <input type="number" ng-model="id" min="0">
+        </label>
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-block button-positive">Search</button>
+      </div>
+    </form>
+    <span id="searchError" ng-show="error">Error: {{error}}</span>
+    <span ng-show="searchId"><b>Books checked out by student id {{searchId}}:</b></span>
+    <div ng-show="books">
+      <ion-list>
+        <ion-item ng-repeat="book in books track by $index">
+          <div class="row">
+            <div class="col-50">
+              <span class="centeredRow">{{book}}</span>
+            </div>
+            <div class="col-50">
+              <button class="button button-block button-assertive" ng-click="checkin(book)">Check In</button>
+            </div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<ion-view view-title="Home">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item item-divider">Status</div>
+      <div class="item item-body">
+        <div>
+          Book database connection: 
+          <span ng-show="!numBooks && !error">Connecting...</span>
+          <span ng-show="error" style="color:red;"><b>Failure!</b></span>
+          <span ng-show="numBooks" style="color:green;"><b>Success!</b></span>
+          
+          <br>
+          <span ng-show="numBooks">There are currently <b>{{numBooks}}</b> books checked out</span>
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">Credits</div>
+      <div class="item item-body">
+        <div>
+          This app was developed by <b>Ankur Sundara</b>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

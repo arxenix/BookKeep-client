@@ -1,0 +1,19 @@
+<ion-view view-title="Check In">
+  <ion-content>
+    <center><p>Scan a book's barcode to check the book in</p></center>
+    
+    <div class="padding">
+      <button type="submit" class="button button-block button-balanced" ng-click="scanBarcode()">Scan</button>
+    </div>    
+    
+    <span ng-show="book"><b>Scanned Book:</b> {{book}} </span>
+    <br>
+    
+    <span id="searchError" ng-show="error">Error: {{error}}</span>
+    <!--<ion-list>
+    <ion-toggle  ng-model="settings.enableFriends">
+        Enable Friends
+    </ion-toggle>
+    </ion-list>-->
+  </ion-content>
+</ion-view>

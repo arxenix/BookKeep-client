@@ -1,0 +1,24 @@
+<ion-view view-title="Check Out">
+  <ion-content>
+    <center><p>Scan a book's barcode, then type in the Student's ID to check the book out</p></center>
+    
+    <div class="padding">
+      <button type="submit" class="button button-block button-balanced" ng-click="scanBarcode()">Scan</button>
+    </div>
+    <span ng-show="book"><b>Book:</b> {{book}}</span>
+    
+    <form ng-submit="checkout(id)">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Student ID:</span>
+          <input type="number" ng-model="id" min="0">
+        </label>
+      </div>
+      <div class="padding">
+        <button type="submit" class="button button-block button-positive">Check Out</button>
+      </div>
+    </form>
+    
+    <span id="searchError" ng-show="error">Error: {{error}}</span>
+  </ion-content>
+</ion-view>

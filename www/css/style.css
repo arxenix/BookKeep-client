@@ -1,0 +1,9 @@
+/* Empty. Add your own CSS if you like */
+#searchError {
+  color: red;
+}
+.centeredRow {
+  display: table-cell;
+  height: 67px;
+  vertical-align: middle;
+}
